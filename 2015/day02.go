@@ -34,6 +34,8 @@ func main() {
 
 	fmt.Println("total wrapping paper in square feet is", totalWrapperFeet)
 	fmt.Println("total ribbon needed in feet is", totalRibbonLengthFeet)
+
+	file.Close()
 }
 
 func parseDimensions(dimensionString string) (int, int, int, error) {
