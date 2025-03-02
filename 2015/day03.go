@@ -8,7 +8,6 @@ import (
 func main() {
 	file, _ := os.ReadFile("./day03.txt")
 	directions := string(file)
-	// directions = "^>v<"
 
 	mapGrid := make(map[int]map[int]int)
 

@@ -14,15 +14,10 @@ var (
 )
 
 func main() {
-	// data := "abcdef609043"
-	// data = "abcdef"
-
 	for i := 0; i < MAX_INT; i++ {
-		// for i := 0; i < 609045; i++ {
 		s := INPUT + strconv.Itoa(i)
 
 		computedHash := hash(s)
-		// fmt.Println(computedHash, i, computedHash[0:5])
 
 		if (computedHash[0:6]) == "000000" {
 			fmt.Println(computedHash, i)
