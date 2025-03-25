@@ -3,9 +3,6 @@ from re import error
 
 
 INPUT = "R4, R4, L1, R3, L5, R2, R5, R1, L4, R3, L5, R2, L3, L4, L3, R1, R5, R1, L3, L1, R3, L1, R2, R2, L2, R5, L3, L4, R4, R4, R2, L4, L1, R5, L1, L4, R4, L1, R1, L2, R5, L2, L3, R2, R1, L194, R2, L4, R49, R1, R3, L5, L4, L1, R4, R2, R1, L5, R3, L5, L4, R4, R4, L2, L3, R78, L5, R4, R191, R4, R3, R1, L2, R1, R3, L1, R3, R4, R2, L2, R1, R4, L5, R2, L2, L4, L2, R1, R2, L3, R5, R2, L3, L3, R3, L1, L1, R5, L4, L4, L2, R5, R1, R4, L3, L5, L4, R5, L4, R5, R4, L3, L2, L5, R4, R3, L3, R1, L5, R5, R1, L3, R2, L5, R5, L3, R1, R4, L5, R4, R2, R3, L4, L5, R3, R4, L5, L5, R4, L4, L4, R1, R5, R3, L1, L4, L3, L4, R1, L5, L1, R2, R2, R4, R4, L5, R4, R1, L1, L1, L3, L5, L2, R4, L3, L5, L4, L1, R3"
-# INPUT = "R2, R2, R2"
-# INPUT = "R5, L5, R5, R3"
-# INPUT = "R8, R4, R4, R8"
 
 class CardinalDirection(Enum):
     N = 0
@@ -24,7 +21,6 @@ def applyCommand(current_direction, current_location, command, steps, is_turning
     """
     x, y = current_location
     new_dir = current_direction
-    # print("\t\tcurrent direction", new_dir)
 
     if (is_turning):
         if command == "R":
@@ -76,8 +72,6 @@ for command in INPUT.split(", "):
         break
 
 
-
-# print("direction", INPUT)
 print("new location and new direction:", currentLocation, currentDirection)
 print(absolute(currentLocation[0]) + absolute(currentLocation[1]))
-# print(locationMap)
+
